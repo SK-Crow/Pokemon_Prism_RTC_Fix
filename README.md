@@ -1,6 +1,6 @@
 # Pokemon Prism RTC Fix
 
-Note: I have only managed to test this in the early stages of the game.  If it breaks your save during any action, I will be unable to assist.  Please remember to **back up your saves**.
+**Note**: I have only managed to test this in the early stages of the game.  If it breaks your save during any action, I will be unable to assist.  Please remember to **back up your saves**.
 
 ## What is it?
 [Pokemon Prism](https://rainbowdevs.com/title/prism/) is a popular Pokemon Crystal romhack that is compatible with original hardware.  This patch fixes the real time clock functionality for *some* unsupported cartridge types.
