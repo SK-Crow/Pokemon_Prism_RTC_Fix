@@ -11,7 +11,7 @@ If your copy of Pokemon Prism changes to a random time every time you save, or r
 
 ## How do I apply the fix?
 1. Go to the [Rainbowdevs website](https://rainbowdevs.com/prism-setup/) and follow the instructions to patch a 0.95.0254 Prism ROM onto a "Pokemon - Crystal Version (USA, Europe) (Rev 1).gbc" ROM (MD5 301899b8087289a6436b0a241fbbb474).
-2. Go to [Marcrobledo's rompatcher.js](https://www.marcrobledo.com/RomPatcher.js/) upload your freshly patched Pokemon Prism 0.95.0254 ROM, then upload the Pokemon_Prism_0.95.0254_RTC_Fix.bps as the patach file.  Click "Apply patch, and download "pokeprism (patched).gbc".
+2. Go to [Marcrobledo's rompatcher.js](https://www.marcrobledo.com/RomPatcher.js/) upload your freshly patched Pokemon Prism 0.95.0254 ROM (MD5 7777fe98c1985ed73d024e2518a3a83b), then upload the Pokemon_Prism_0.95.0254_RTC_Fix.bps as the patch file.  Click "Apply patch, and download "pokeprism (patched).gbc".
 
 Your patched ROM's MD5 will be **cee3a490c52381e7dc822f9abc7fd467**.  If you get a different result, you missed a step, used a different base ROM, or applied the wrong version of Pokemon Prism.
 
