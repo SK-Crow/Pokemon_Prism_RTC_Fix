@@ -6,7 +6,7 @@
 [Pokemon Prism](https://rainbowdevs.com/title/prism/) is a popular Pokemon Crystal romhack that is compatible with original hardware.  This patch fixes the real time clock functionality for *some* unsupported cartridge types.
 
 ## Who needs this patch?
-If your copy of Pokemon Prism changes to a random time every time you save, or re-launch the system, you may benefit from this patch.  I have only been able to test this on the black PCB flash cartridges sold by Xiame Tuiwan Electronic Technology Co., Ltd. on Alibaba.com.  I am in no way affiliated, I just bought these cartridges over the other options because I thought black would make a cooler cartridge.  This will likely fix Pokemon Prism for unsupported cartridges and emulators with the same symptoms.  See the images section below for pictures of the supported cartridge.
+If your copy of Pokemon Prism changes to a random time every time you save, or re-launch the system, you may benefit from this patch.  I have only been able to test this on the black PCB flash cartridges sold by Xiame Tuiwan Electronic Technology Co., Ltd. on Alibaba.com.  I am in no way affiliated, I just bought these cartridges over the other options because I thought black would make a cooler cartridge.  This may fix Pokemon Prism for some unsupported cartridges with the same symptoms (see list below).  See the images section below for pictures of the supported cartridge.
 
 ## What is there to fix?
 Unlike Pokemon Crystal, Pokemon Prism rewrites the cartridge's real time clock every time you save.  Pokemon Crystal only reads the clock, then adds a saved offset to it, thus accurately keeping the date and time.  Prism keeps that same offset, but it folds the current time into the offset and writes zeros to the cartridge's clock to start counting again from 0.  This has the benefit of fixing a bug with Pokemon Crystal in which the RTC counter cannot count greater than 512 days, however it has an unintended side effect of breaking some cheap third party flash cartridges.
@@ -25,7 +25,7 @@ Side effects:
 - Existing saves have a wrong stored offset (if they were made on a cartridge with this problem).  I don't know what will happen if you set the clock again other than with New Game.  Backup your save before messing with this.
 - Prism no longer clears the clock's halt flag.  If your clock was ever halted (dead battery for example), Prism won't start it again.
 
-I have only tested this on one cartridge type.  A genuine MBC3 cartridge does NOT need the patch, and I haven't tested it on them or other clones.
+This has only been confirmed working on one cartridge type (see below).  A genuine MBC3 cartridge does NOT need the patch, and I haven't tested it on them or other clones.
 
 ## How do I apply the fix?
 1. Go to the [Rainbowdevs website](https://rainbowdevs.com/prism-setup/) and follow the instructions to patch a 0.95.0254 Prism ROM onto a "Pokemon - Crystal Version (USA, Europe) (Rev 1).gbc" ROM (MD5 301899b8087289a6436b0a241fbbb474).
@@ -41,6 +41,13 @@ You'll know it works if:
 4. The real time clock is consistent when you save your game, then re-check the time.
 
 If this patch does not fix your cartridge, please open an [issue](https://github.com/SK-Crow/Pokemon_Prism_RTC_Fix/issues) and I'll do what I can to help.  When in doubt, ask Claude or Grok - both have a good understanding of these things, and can apply patches for you.
+
+## Compatibility
+### Working
+- "RTC Flash Cart GB/GBC MCB3 Support Gbxcart Retro Handheld Everdrive" by "Xiame Tuiwan Electronic Technology Co., Ltd."
+
+### Not Working
+- EZ Flash Jr.
 
 ## Images
 See a list of supported cartridge types below.  There's only one at the moment - please submit a picture of yours if it works for you.
